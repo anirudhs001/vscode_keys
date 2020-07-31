@@ -1,0 +1,71 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 16,
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": true,
+    "window.menuBarVisibility": "toggle",
+    "terminal.integrated.rendererType": "dom",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "editor.lineNumbers": "relative",
+    
+    "files.associations": {
+        "*.gohtml": "html" //treat gohtml as html
+    },
+    // remap j+k as vim.escape
+    "vim.insertModeKeyBindings": [
+        {
+            "before":["j", "k"],
+            "after" :["<esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before":["j", "k"],
+            "after": ["<esc>"]
+        }
+    ],
+    //end j+k as escape remap
+    //terminal font for powerline
+    "terminal.integrated.fontFamily": "Meslo LG M DZ for Powerline",
+    "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+    "workbench.colorCustomizations": {
+        //custom settings
+        "editor.background": "#000000",
+        "statusBar.background": "#214e69",
+        "statusBar.foreground": "#ffffff",
+        "editorError.foreground": "#f36c6c",
+        "editor.selectionBackground": "#ffff0070",
+        //custom settings endground"
+        "activityBarBadge.background": "#00BCD4",
+        "activityBar.activeBorder": "#00BCD4",
+        "list.activeSelectionForeground": "#00BCD4",
+        "list.inactiveSelectionForeground": "#00BCD4",
+        "list.highlightForeground": "#00BCD4",
+        "scrollbarSlider.activeBackground": "#00BCD450",
+        "editorSuggestWidget.highlightForeground": "#00BCD4",
+        "textLink.foreground": "#00BCD4",
+        "progressBar.background": "#00BCD4",
+        "pickerGroup.foreground": "#00BCD4",
+        "tab.activeBorder": "#00BCD4",
+        "notificationLink.foreground": "#00BCD4",
+        "editorWidget.resizeBorder": "#00BCD4",
+        "editorWidget.border": "#00BCD4",
+        "settings.modifiedItemIndicator": "#00BCD4",
+        "settings.headerForeground": "#00BCD4",
+        "panelTitle.activeBorder": "#00BCD4",
+        "breadcrumb.activeSelectionForeground": "#00BCD4",
+        "menu.selectionForeground": "#00BCD4",
+        "menubar.selectionForeground": "#00BCD4",
+        "editor.findMatchBorder": "#00BCD4",
+        "selection.background": "#00BCD440"
+    },
+    "materialTheme.accent": "Cyan",
+    "editor.cursorBlinking": "smooth",
+    "editor.quickSuggestions":true, 
+    "editor.tokenColorCustomizations": {
+        "comments": "#777",
+    },
+    "python.pythonPath": "/usr/bin/python3",
+
+}

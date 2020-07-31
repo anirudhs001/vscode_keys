@@ -1,0 +1,248 @@
+// Place your key bindings in this file to override the defaults
+[   
+    //toggle b/w terminal and editor
+    { 
+        "key": "alt+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    { 
+        "key": "alt+t",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // end toggle
+    
+    {
+        "key": "shift+alt+b",
+        "command": "workbench.debug.viewlet.action.addFunctionBreakpointAction"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.debug.viewlet.action.addFunctionBreakpointAction"
+    },
+    
+    //EDIT: escape key added in settings.json
+    
+    {//side bar
+        "key": "alt+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "alt+[",
+        "command": "editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+[",
+        "command": "outdent",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-outdent",
+        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+    },
+    {
+        "key": "shift+space",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {//relative and absolute line numbers
+        "key": "ctrl+l",
+        "command": "settings.cycle",
+        "when": "editorTextFocus",
+        "args":{
+            "id": "relativeNumbers", 
+            "values": [
+                {
+                    "editor.lineNumbers": "on"
+                },
+                {
+                    "editor.lineNumbers": "relative"
+                }
+            ]
+        }
+    },
+    {
+        "key": "shift+tab",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+space",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "alt+i",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+    },
+    {
+        "key": "ctrl+k e",
+        "command": "-workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+    },
+    //move cursor with hjkl (insert mode)
+    {
+        "key": "alt+h",
+        "command":"cursorLeft",
+        "when": "vim.mode == Insert"
+    },
+    {
+        "key": "alt+j",
+        "command":"cursorDown",
+        "when": "vim.mode == Insert"
+    },
+    {
+        "key": "alt+k",
+        "command":"cursorUp",
+        "when": "vim.mode == Insert"
+    },
+    {
+        "key": "alt+l",
+        "command":"cursorRight",
+        "when": "vim.mode == Insert"
+    },
+    //end 
+    //move line with alt+j/k in normal mode
+    {
+        "key": "alt+j",
+        "command":"editor.action.moveLinesDownAction",
+        "when": "vim.mode != Insert"
+    },
+    {
+        "key": "alt+k",
+        "command":"editor.action.moveLinesUpAction",
+        "when": "vim.mode != Insert"
+    },
+    { // END of line
+        "key": "shift+B", 
+        "command":"cursorHome",
+        "when": "vim.mode == Normal"
+    },
+    { // START of line
+        "key": "shift+E", 
+        "command":"cursorLineEnd",
+        "when": "vim.mode == Normal"
+    },
+    { //show extensions
+        "key": "alt+x",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "ctrl+shift+x",
+        "command": "-workbench.view.extensions"
+    },
+    { //close panel
+        "key": "alt+v",
+        "command":"workbench.action.togglePanel",
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {//find with alt+f instead of ctrl+f
+        "key": "alt+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-actions.find"
+    },
+    {
+        "key": "alt+f",
+        "command": "repl.action.filter",
+        "when": "inDebugRepl && textInputFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-repl.action.filter",
+        "when": "inDebugRepl && textInputFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused || terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused || terminalFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "alt+r alt+i",
+        "command": "editor.action.reindentlines"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+tab ctrl+h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+tab ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    }
+]
