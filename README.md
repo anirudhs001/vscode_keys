@@ -17,3 +17,4 @@ shortcuts:
 |alt+shift+j/k| add cursor down/up
 |alt+r+i| re-indent|
 |alt+up/down| move line up/down|
+|alt+z| toggle word wrap|
